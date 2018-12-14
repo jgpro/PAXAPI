@@ -25,8 +25,7 @@ function loadScript(url, callback) {
 
 // call the function...
 loadScript("luxon.js", function() {
-  document.write(DateTime.utc().startOf('month').plus( { months: 1 } ).toSeconds());
-  window.stop();
+  document.getElementById("data").innerHTML = DateTime.utc().startOf('month').plus( { months: 1 } ).toSeconds();
 });
 </script>
-<p id="data">error</p>
+<p id="data"></p>
